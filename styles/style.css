@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+  --royal-blue: #1992d3;
+}
+
 html,
 body {
   box-sizing: border-box;
@@ -43,7 +47,7 @@ header {
 /* ========== SIDEBAR ===============  */
 .sidebar {
   grid-area: sidebar;
-  background-color: #1992d3;
+  background-color: var(--royal-blue);
   display: grid;
   grid-template-columns: 20% 1fr 1fr;
   width: 100%;
@@ -64,11 +68,22 @@ img {
   width: auto;
 }
 
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.small {
+  width: 40px;
+  height: 40px;
+}
+
 @media only screen and (min-width: 900px) {
   .container {
     display: grid;
     grid-template-columns: 250px 4fr;
-    grid-template-rows: auto 4fr;
+    grid-template-rows: 160px 4fr;
     grid-template-areas:
       'sidebar header'
       'sidebar main';
@@ -80,18 +95,69 @@ img {
     grid-area: header;
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 60px 100px;
     grid-template-areas:
-      'form notif-bar'
-      'greeting action-btns';
+      'form notif'
+      'greeting action';
   }
 
-  .header form {
+  form {
     grid-area: form;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form input {
+    border-width: 0px;
+    border: none;
+    width: 90%;
+    background-color: #e2e8f0;
+    border-radius: 10px 10px;
+    font-size: 15px;
+    padding: 5px;
   }
 
   .notif-bar {
-    grid-area: notif-bar;
+    grid-area: notif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .notif-bar .name {
+    font-weight: 700;
+  }
+
+  .greeting-cont {
+    grid-area: greeting;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 3em;
+    gap: 1em;
+    line-height: 5px;
+  }
+
+  .greeting-cont .name {
+    font-size: 19px;
+    font-weight: 900;
+  }
+
+  .action-btns {
+    grid-area: action;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .action-btns button {
+    background-color: var(--royal-blue);
+    padding: 0.5em 1.5em;
+    border-radius: 1rem 1rem;
+    color: #fff;
+    border: none;
   }
 
   /* ========== SIDEBAR ===============  */
