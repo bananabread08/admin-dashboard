@@ -22,10 +22,6 @@ body {
   box-sizing: inherit;
 }
 
-ul {
-  list-style: none;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -55,6 +51,13 @@ header {
   font-weight: 900;
 }
 
+.sidebar ul li {
+  cursor: pointer;
+}
+.sidebar ul > li:hover {
+  color: rgb(58, 58, 58);
+}
+
 /* ========== MAIN ===============  */
 .main-content {
   grid-area: main;
@@ -77,6 +80,14 @@ img {
 .small {
   width: 40px;
   height: 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 900px) {
@@ -235,8 +246,15 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: left;
   }
-
+  .card > * {
+    flex-basis: 100%;
+  }
+  .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
   .card p {
     font-size: 14px;
   }
@@ -250,7 +268,8 @@ img {
     background-color: #fff;
   }
 
-  .ann-card {
+  .flex-media {
+    /*for announcement and trend cards*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,18 +277,23 @@ img {
     padding: 1em;
   }
 
-  .ann-card::after {
+  .flex-media::after {
     display: inline-block;
     content: '';
     border-top: 0.1rem solid black;
     width: 4rem;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
     transform: translateY(-1rem);
     width: 90%;
   }
 
   .trending {
     grid-area: trending;
+    background-color: #fff;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px 5px;
     background-color: #fff;
   }
 }
