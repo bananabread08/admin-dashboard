@@ -248,6 +248,7 @@ button {
     align-items: center;
     text-align: left;
   }
+
   .card > * {
     flex-basis: 100%;
   }
