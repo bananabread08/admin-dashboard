@@ -34,11 +34,13 @@ ul {
   width: 100%;
 }
 
+/* ========== HEADER ===============  */
 header {
   grid-area: header;
   background-color: #fff;
 }
 
+/* ========== SIDEBAR ===============  */
 .sidebar {
   grid-area: sidebar;
   background-color: #1992d3;
@@ -49,52 +51,80 @@ header {
   font-weight: 900;
 }
 
-.sidebar img {
-  vertical-align: middle;
-  height: 20px;
-  width: auto;
-}
-
+/* ========== MAIN ===============  */
 .main-content {
   grid-area: main;
   background-color: rgb(179, 245, 223);
 }
 
+/* ========= GLOBAL ===========*/
+img {
+  vertical-align: middle;
+  height: 20px;
+  width: auto;
+}
+
 @media only screen and (min-width: 900px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 250px 4fr;
+    grid-template-rows: auto 4fr;
     grid-template-areas:
       'sidebar header'
       'sidebar main';
     height: 100%;
   }
 
+  /* ========== HEADER ===============  */
   .header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'form notif-bar'
+      'greeting action-btns';
   }
 
+  .header form {
+    grid-area: form;
+  }
+
+  .notif-bar {
+    grid-area: notif-bar;
+  }
+
+  /* ========== SIDEBAR ===============  */
   .sidebar {
     grid-area: sidebar;
     display: grid;
     grid-template-rows: 10% 1fr 2fr;
-    grid-template-columns: none;
+    grid-template-columns: unset;
   }
 
   .sidebar h1 {
     text-align: center;
   }
 
-  .upper,
-  .lower {
-    align-self: center;
-    display: unset;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  h1 img {
+    height: 40px;
+    width: auto;
+    padding-right: 0.5em;
   }
 
+  .sidebar li {
+    margin: 1em 0;
+  }
+  .sidebar li img {
+    padding-right: 1em;
+  }
+
+  .upper,
+  .lower {
+    display: unset;
+  }
+
+  /* ========== MAIN ===============  */
   .main-content {
     grid-area: main;
   }
