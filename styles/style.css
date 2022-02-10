@@ -27,28 +27,99 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 4fr;
   grid-template-areas:
-    'header'
     'sidebar'
+    'header'
     'main';
   height: 100%;
-  width: 100%;
+  width: 100vw;
 }
 
 /* ========== HEADER ===============  */
-header {
+.header {
   grid-area: header;
-  background-color: #fff;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'form notif'
+    'greeting action';
+}
+
+form {
+  grid-area: form;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  border-width: 0px;
+  border: none;
+  width: 90%;
+  background-color: #e2e8f0;
+  border-radius: 10px 10px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.notif-bar {
+  grid-area: notif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.notif-bar .name {
+  font-weight: 700;
+}
+
+.greeting-cont {
+  grid-area: greeting;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0.5rem;
+  gap: 1em;
+  line-height: 5px;
+}
+
+.greeting-cont .name {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.action-btns {
+  grid-area: action;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.action-btns button {
+  background-color: var(--royal-blue);
+  padding: 0.5em 1.5em;
+  border-radius: 1rem 1rem;
+  color: #fff;
+  border: none;
 }
 
 /* ========== SIDEBAR ===============  */
 .sidebar {
   grid-area: sidebar;
   background-color: var(--royal-blue);
-  display: grid;
-  grid-template-columns: 20% 1fr 1fr;
   width: 100%;
   color: #fff;
   font-weight: 900;
+}
+.sidebar-head {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul {
+  display: none;
 }
 
 .sidebar ul li {
@@ -61,7 +132,99 @@ header {
 /* ========== MAIN ===============  */
 .main-content {
   grid-area: main;
-  background-color: #c0c0c0;
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  grid-template-rows: 30px 1fr 30px 1fr;
+  grid-template-areas:
+    'projhead annhead'
+    'projects announcements'
+    'projects trendhead'
+    'projects trending';
+  gap: 1.5em;
+  padding: 1em;
+  background-color: #e0e0e0;
+}
+
+.project-header {
+  grid-area: projhead;
+}
+
+.ann-header {
+  grid-area: annhead;
+}
+
+.trend-head {
+  grid-area: trendhead;
+}
+
+.projects {
+  text-align: center;
+  grid-area: projects;
+  display: grid;
+  width: 100%;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.card {
+  background-color: #fff;
+  border-left: 1em solid aquamarine;
+  border-radius: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.card > * {
+  flex-basis: 100%;
+}
+.card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.card p {
+  font-size: 14px;
+}
+
+.announcements {
+  grid-area: announcements;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 5px 5px;
+  background-color: #fff;
+}
+
+.flex-media {
+  /*for announcement and trend cards*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1em;
+}
+
+.flex-media::after {
+  display: inline-block;
+  content: '';
+  border-top: 0.1rem solid black;
+  width: 4rem;
+  margin: 1rem 1rem;
+  transform: translateY(-1rem);
+  width: 90%;
+}
+
+.trending {
+  grid-area: trending;
+  background-color: #fff;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 5px 5px;
+  background-color: #fff;
 }
 
 /* ========= GLOBAL ===========*/
@@ -102,73 +265,10 @@ button {
   }
 
   /* ========== HEADER ===============  */
-  .header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 60px 100px;
-    grid-template-areas:
-      'form notif'
-      'greeting action';
-  }
-
-  form {
-    grid-area: form;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  form input {
-    border-width: 0px;
-    border: none;
-    width: 90%;
-    background-color: #e2e8f0;
-    border-radius: 10px 10px;
-    font-size: 15px;
-    padding: 5px;
-  }
-
-  .notif-bar {
-    grid-area: notif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-  }
-
-  .notif-bar .name {
-    font-weight: 700;
-  }
-
-  .greeting-cont {
-    grid-area: greeting;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 3em;
-    gap: 1em;
-    line-height: 5px;
-  }
 
   .greeting-cont .name {
     font-size: 19px;
     font-weight: 900;
-  }
-
-  .action-btns {
-    grid-area: action;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .action-btns button {
-    background-color: var(--royal-blue);
-    padding: 0.5em 1.5em;
-    border-radius: 1rem 1rem;
-    color: #fff;
-    border: none;
   }
 
   /* ========== SIDEBAR ===============  */
@@ -176,6 +276,7 @@ button {
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
+    position: unset;
   }
 
   .sidebar h1 {
@@ -185,6 +286,10 @@ button {
   h1 img {
     height: 40px;
     padding-right: 0.5em;
+  }
+
+  .sidebar ul {
+    display: block;
   }
 
   .sidebar li {
@@ -200,34 +305,11 @@ button {
     display: unset;
   }
 
+  .burger {
+    display: none;
+  }
+
   /* ========== MAIN ===============  */
-  .main-content {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 3fr 1.5fr;
-    grid-template-rows: 30px 1fr 30px 1fr;
-    grid-template-areas:
-      'projhead annhead'
-      'projects announcements'
-      'projects trendhead'
-      'projects trending';
-    gap: 1.5em;
-    padding: 1em;
-    background-color: #e0e0e0;
-  }
-
-  .project-header {
-    grid-area: projhead;
-  }
-
-  .ann-header {
-    grid-area: annhead;
-  }
-
-  .trend-head {
-    grid-area: trendhead;
-  }
-
   .projects {
     text-align: center;
     grid-area: projects;
@@ -236,65 +318,5 @@ button {
     grid-template-rows: repeat(auto-fit, minmax(100px, 0.5fr));
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
-  }
-
-  .card {
-    background-color: #fff;
-    border-left: 1em solid aquamarine;
-    border-radius: 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-  }
-
-  .card > * {
-    flex-basis: 100%;
-  }
-  .card h3 {
-    font-size: 20px;
-    font-weight: 700;
-  }
-  .card p {
-    font-size: 14px;
-  }
-
-  .announcements {
-    grid-area: announcements;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    border-radius: 5px 5px;
-    background-color: #fff;
-  }
-
-  .flex-media {
-    /*for announcement and trend cards*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1em;
-  }
-
-  .flex-media::after {
-    display: inline-block;
-    content: '';
-    border-top: 0.1rem solid black;
-    width: 4rem;
-    margin: 1rem 1rem;
-    transform: translateY(-1rem);
-    width: 90%;
-  }
-
-  .trending {
-    grid-area: trending;
-    background-color: #fff;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    border-radius: 5px 5px;
-    background-color: #fff;
   }
 }
