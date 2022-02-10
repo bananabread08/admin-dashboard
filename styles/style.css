@@ -41,8 +41,8 @@ ul {
 }
 
 .container {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 6fr;
@@ -55,20 +55,136 @@ header {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: headcont;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.header-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.5fr 1.5fr;
+      grid-template-columns: 2.5fr 1.5fr;
+  -ms-grid-rows: 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr 0.5fr;
+      grid-template-areas: 'searchform notif' 'greeting action';
+}
+
+.header-container form {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: searchform;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.header-container form img {
+  vertical-align: middle;
+  margin-right: -0.5em;
+  cursor: pointer;
+}
+
+.header-container form input {
+  width: clamp(10em, 90%, 100vw);
   background-color: #e0e0e0;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1em 1em;
+}
+
+.header-container .notif-bar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: notif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  gap: 10px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-container .notif-bar .avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 2em 2em;
+}
+
+.header-container .greeting-cont {
+  margin-left: 1em;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: greeting;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.header-container .greeting-cont .avatar {
+  height: 70px;
+  width: 70px;
+  border-radius: 2em 2em;
+}
+
+.header-container .action-btns {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: action;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  gap: 10px;
+  cursor: pointer;
+  gap: 2em;
+}
+
+.header-container .action-btns button {
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  border-radius: 1.5em 1.5em;
+  border: none;
+  background-color: #1992d3;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-container .action-btns button:hover {
+  background-color: #247dad;
 }
 
 main {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: maincont;
-  background-color: #fff;
+  background-color: #e0e0e0;
 }
 
 nav {
   background-color: #1992d3;
   height: 100%;
-  width: 300px;
+  width: clamp(50px, 300px, 100%);
   color: #fff;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;

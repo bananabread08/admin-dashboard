@@ -51,8 +51,8 @@ ul {
 }
 
 .container {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: grid;
   grid-template: 1fr 6fr / 1fr 4fr;
   grid-template-areas:
@@ -60,20 +60,93 @@ ul {
     'sidebar maincont';
 }
 
+// HEADER
 header {
   grid-area: headcont;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-areas:
+    'searchform notif'
+    'greeting action';
+
+  form {
+    grid-area: searchform;
+    @include flex-align();
+
+    img {
+      vertical-align: middle;
+      margin-right: -0.5em;
+      cursor: pointer;
+    }
+    input {
+      width: clamp(10em, 90%, 100vw);
+      background-color: #e0e0e0;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 1em 1em;
+    }
+  }
+
+  .notif-bar {
+    grid-area: notif;
+    @include flex-align();
+    justify-content: center;
+    .avatar {
+      height: 50px;
+      width: 50px;
+      border-radius: 2em 2em;
+    }
+  }
+
+  .greeting-cont {
+    margin-left: 1em;
+    grid-area: greeting;
+    @include flex-align();
+
+    .avatar {
+      height: 70px;
+      width: 70px;
+      border-radius: 2em 2em;
+    }
+  }
+
+  .action-btns {
+    grid-area: action;
+    @include flex-align();
+    gap: 2em;
+    button {
+      padding: 0.5em 1.5em 0.5em 1.5em;
+      border-radius: 1.5em 1.5em;
+      border: none;
+      background-color: $royal-blue;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #247dad;
+      }
+    }
+  }
+}
+
+// MAIN
+main {
+  grid-area: maincont;
   background-color: #e0e0e0;
 }
 
-main {
-  grid-area: maincont;
-  background-color: #fff;
-}
-
+// SIDE
 nav {
   background-color: $royal-blue;
   height: 100%;
-  width: 300px;
+  width: clamp(50px, 300px, 100%);
   color: #fff;
   grid-area: sidebar;
 }
