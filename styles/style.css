@@ -266,6 +266,9 @@ button {
 
   /* ========== HEADER ===============  */
 
+  .greeting-cont {
+    margin-left: 3rem;
+  }
   .greeting-cont .name {
     font-size: 19px;
     font-weight: 900;
