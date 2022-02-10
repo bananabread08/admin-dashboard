@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  gap: 10px;
+  cursor: pointer;
+}
+
+$royal-blue: #1992d3;
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow-wrap: break-word;
+  background-color: #e0e0e0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//reset
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template: 1fr 6fr / 1fr 4fr;
+  grid-template-areas:
+    'sidebar headcont'
+    'sidebar maincont';
+}
+
+header {
+  grid-area: headcont;
+  background-color: #e0e0e0;
+}
+
+main {
+  grid-area: maincont;
+  background-color: #fff;
+}
+
+nav {
+  background-color: $royal-blue;
+  height: 100%;
+  width: 300px;
+  color: #fff;
+  grid-area: sidebar;
+}
+
+.sidebar {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr 2.25fr 2.25fr;
+  grid-template-areas:
+    'dash'
+    'upper'
+    'lower';
+
+  .dash-cont {
+    grid-area: dash;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+  .upper,
+  .lower {
+    padding: 0 2rem;
+    li {
+      @include flex-align();
+    }
+    li:hover {
+      background-color: #247dad;
+      border-radius: 5px 5px;
+    }
+  }
+  .upper {
+    grid-area: upper;
+  }
+  .lower {
+    grid-area: lower;
+  }
+}
