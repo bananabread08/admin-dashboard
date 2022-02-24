@@ -60,7 +60,7 @@ nav {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/3;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #1992d3;
   color: #fff;
@@ -126,12 +126,6 @@ nav .dash-lower {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
-}
-
-main {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  grid-row: 2/4;
 }
 
 header {
@@ -257,6 +251,7 @@ header .action-btns button:hover {
 }
 
 main {
+  padding: 1rem;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -266,20 +261,35 @@ main {
   background-color: #e0e0e0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
-  -ms-grid-rows: 3fr 3fr;
-      grid-template-rows: 3fr 3fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: max-content 1fr;
+      grid-template-rows: -webkit-max-content 1fr;
+      grid-template-rows: max-content 1fr;
       grid-template-areas: 'projects news-trend' 'projects news-trend';
 }
 
 .projects {
-  height: 100%;
-  width: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: projects;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  -ms-grid-columns: (minmax(110px, 1f))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1f));
+  display: -ms-grid;
+  display: grid;
+}
+
+.projects .card {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 0.5rem;
+  padding: 1rem;
 }
 
 .news-and-trend {

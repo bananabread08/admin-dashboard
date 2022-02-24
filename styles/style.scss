@@ -64,7 +64,7 @@ body {
 nav {
   grid-column: 1/2;
   grid-row: 1/3;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: $royal-blue;
   color: #fff;
@@ -100,10 +100,6 @@ nav {
   .dash-lower {
     grid-row: 3/4;
   }
-}
-
-main {
-  grid-row: 2/4;
 }
 
 header {
@@ -180,21 +176,30 @@ header {
 
 // MAIN
 main {
+  padding: 1rem;
   grid-row: 2/3;
   grid-column: 2/3;
   background-color: #e0e0e0;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 3fr 3fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: max-content 1fr;
   grid-template-areas:
     'projects news-trend'
     'projects news-trend';
 }
 
 .projects {
-  height: 100%;
-  width: 100%;
   grid-area: projects;
+  grid-template-rows: max-content;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1f));
+  display: grid;
+
+  .card {
+    display: grid;
+    row-gap: 0.5rem;
+    padding: 1rem;
+  }
 }
 
 .news-and-trend {
