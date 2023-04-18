@@ -4,7 +4,6 @@ body {
   font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
-  overflow: hidden;
 }
 
 /* UTILITY */
@@ -12,6 +11,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #e5e4e2;
+  border-radius: 20px;
+  object-fit: contain;
 }
 
 /*Container*/
@@ -98,12 +105,6 @@ header {
   justify-content: space-around;
 }
 
-header .avatar {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-}
-
 .header-upper {
   display: flex;
   align-items: center;
@@ -157,97 +158,90 @@ header form input {
   color: #fff;
 }
 
-/* 
-header {
-  background-color: #ffffff;
-  color: black;
-  grid-area: hd;
-  padding: 0 1rem;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-auto-rows: 75px;
-  grid-template-areas:
-    'fm fm fm fm fm nb nb nb'
-    'gr gr gr gr gr ab ab ab';
-  box-shadow: 0px 2px 3px rgb(175, 175, 175);
-}
-
-header form {
-  grid-area: fm;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-header form input {
-  width: 100%;
-  border-radius: 16px;
-  outline: none;
-  border: none;
-  padding: 0.3rem 1rem;
-  margin-right: 1rem;
+/* MAIN */
+main {
   background-color: #e2e8f0;
+  grid-area: mn;
+  /* height: 100vh;
+  overflow-y: auto; */
+  padding: 1.5rem 1rem;
+  max-height: 100%;
 }
 
-.notif {
-  grid-area: nb;
+.main-wrapper {
   display: grid;
-  place-content: center;
+  grid-template-columns: 6fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  max-height: 100%;
 }
 
-.notif-wrap {
+.card-base {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px rgb(175, 175, 175);
+  padding: 0.5rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects-container {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 0.5rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
-.greeting {
-  grid-area: gr;
+.card {
+  border-left: 0.5rem solid skyblue;
+}
+
+.icons {
+  align-self: flex-end;
   display: flex;
-  align-items: center;
-  gap: 1rem;
 }
 
-.greeting .avatar {
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
+.announcements {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding: 0.5rem;
 }
 
-.greeting-name {
-  font-weight: 700;
+.ann-card {
+  font-size: 0.8rem;
+  padding: 0.5rem;
 }
 
-.action-btns {
-  width: 100%;
-  grid-area: ab;
+.trending {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding: 0.5rem;
+}
+
+.trend {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.action-btns button {
-  padding: 0.3rem 1.5rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: #1992d3;
-  color: #fff;
-} */
-
-/* MAIN */
-main {
-  background-color: aliceblue;
-  grid-area: mn;
-  height: 100vh;
-  overflow-y: auto;
-  padding: 1.5rem 1rem;
+.trend-names {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
-@media (max-width: 700px) {
+.trend-names > p:first-child {
+  font-weight: 700;
+}
+@media (max-width: 800px) {
   .parent {
-    display: grid;
     grid-template-columns: 250px repeat(8, 1fr);
-    grid-auto-rows: 70px auto;
+    grid-auto-rows: 70px 200px auto;
     grid-template-areas:
       'nav nav nav nav nav nav nav nav nav '
       'hd hd hd hd hd hd hd hd hd'
