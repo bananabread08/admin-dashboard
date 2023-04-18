@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="reset.css" />
     <title>Dashboard</title>
   </head>
   <body>
-    <div class="container">
-      <header class="header">
+    <div class="parent">
+      <header>
         <form>
           <div><img src="assets/magnify.png" alt="magnifying glass" /></div>
           <input type="text" placeholder="Search..." />
         </form>
-        <div class="notif-bar">
+        <!-- <div class="notif-bar">
           <img
             class="bell-icon"
             src="assets/bell-ring.png"
@@ -30,222 +30,146 @@
             <p>Hi there,</p>
             <p class="name">Pika D. Chu (@pikap1111)</p>
           </div>
-        </div>
+        </div> -->
         <div class="action-btns">
           <button>New</button>
           <button>Upload</button>
           <button>Share</button>
         </div>
       </header>
-      <nav class="sidebar">
-        <h1>
-          <img src="assets/view-dashboard.png" alt="dashboard" />Dashboard
-        </h1>
-        <ul class="upper">
-          <li><img src="./assets/home.png" alt="house icon" />Home</li>
-          <li>
-            <img
-              src="./assets/card-account-details.png"
-              alt="card profile"
-            />Profile
-          </li>
-          <li><img src="./assets/message.png" alt="message icon" />Messages</li>
-          <li>
-            <img src="./assets/clock-time-three.png" alt="clock icon" />History
-          </li>
-          <li><img src="./assets/note-multiple.png" alt="note icon" />Tasks</li>
-          <li>
-            <img
-              src="./assets/account-group.png"
-              alt="group-of-people-icon"
-            />Communities
-          </li>
-        </ul>
-        <ul class="lower">
-          <li><img src="./assets/cog.png" alt="cog-icon" />Settings</li>
-          <li>
-            <img src="./assets/help-circle.png" alt="help-circle" />Support
-          </li>
-          <li>
-            <img
-              src="./assets/shield-lock.png"
-              alt="shield with lock icon"
-            />Privacy
-          </li>
-        </ul>
-      </nav>
-      <main class="main-content">
-        <h2 class="project-header">Your Projects</h2>
-        <section class="projects">
-          <div class="card">
-            <h3>Northern Downpour</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-              repudiandae libero ipsam quasi, distinctio et dolorum atque
-              doloremque amet error nemo praesentium blanditiis qui porro!
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <h3>I Write Sins Not Tragedies</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
-              earum aperiam error suscipit ratione laborum, dolorum facilis
-              repellendus ea obcaecati? Ut voluptas delectus qui sit! Provident
-              distinctio non facere inventore.
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Nails for Breakfast, Tacks for Snacks</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
-              suscipit aspernatur, consequuntur nostrum labore rerum eveniet
-              commodi, in laboriosam corporis recusandae excepturi. Tenetur,
-              perferendis possimus.
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <h3>That Green Gentleman (Things Have Changed)</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
-              eveniet voluptatum facere dolorum cumque enim tenetur corrupti quo
-              aut odit soluta, impedit commodi! Fugiat ad cum voluptatum optio
-              facere.
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <h3>title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, sunt?
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <h3>title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, sunt?
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <h2 class="ann-header">Announcements</h2>
-        <section class="announcements">
-          <div class="ann-card flex-media">
-            <p>announcement</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
-              veniam?
-            </p>
-          </div>
-          <div class="ann-card flex-media">
-            <p>announcement</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero,
-              non.
-            </p>
-          </div>
-          <div class="ann-card flex-media">
-            <p>announcement</p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Deserunt, aperiam?
-            </p>
-          </div>
-        </section>
-
-        <h2 class="trend-header">Trending</h2>
-        <section class="trending">
-          <div class="trend-card flex-media">
-            <p>trend</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
-              veniam?
-            </p>
-          </div>
-          <div class="trend-card flex-media">
-            <p>trend</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
-              veniam?
-            </p>
-          </div>
-        </section>
+      <aside>
+        <nav>
+          <ul class="logo">
+            <li>
+              <img src="assets/view-dashboard.png" alt="dashboard" />
+              Dashboard
+            </li>
+          </ul>
+          <ul class="upper-nav">
+            <li><img src="./assets/home.png" alt="house icon" />Home</li>
+            <li>
+              <img
+                src="./assets/card-account-details.png"
+                alt="card profile"
+              />Profile
+            </li>
+            <li>
+              <img src="./assets/message.png" alt="message icon" />Messages
+            </li>
+            <li>
+              <img
+                src="./assets/clock-time-three.png"
+                alt="clock icon"
+              />History
+            </li>
+            <li>
+              <img src="./assets/note-multiple.png" alt="note icon" />Tasks
+            </li>
+            <li>
+              <img
+                src="./assets/account-group.png"
+                alt="group-of-people-icon"
+              />Communities
+            </li>
+          </ul>
+          <ul class="lower-nav">
+            <li><img src="./assets/cog.png" alt="cog-icon" />Settings</li>
+            <li>
+              <img src="./assets/help-circle.png" alt="help-circle" />Support
+            </li>
+            <li>
+              <img
+                src="./assets/shield-lock.png"
+                alt="shield with lock icon"
+              />Privacy
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <h2>Main Content</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt,
+          quas veritatis veniam nostrum accusantium nesciunt nemo natus? Soluta
+          recusandae vero autem vel culpa nobis sint iusto necessitatibus,
+          perspiciatis accusantium voluptatum error quibusdam eum, illo
+          veritatis neque iure ut consequatur rem mollitia unde saepe magnam
+          consectetur. Cumque expedita pariatur a omnis deserunt? Nulla, a!
+          Similique nostrum maiores error? Iste rerum accusantium reiciendis
+          cumque id beatae aliquid ipsum cum voluptate soluta! Assumenda
+          dignissimos, reprehenderit, asperiores in laudantium vel voluptatum
+          quas modi pariatur, dolorum tenetur adipisci? Enim possimus eum
+          laborum? Expedita enim, ut assumenda error nam dignissimos quia
+          adipisci placeat, ipsa, sit dolore corrupti quidem tempore vitae
+          cupiditate veniam? Nisi exercitationem necessitatibus aliquid, in
+          veniam commodi maiores architecto fugit doloribus libero culpa eaque
+          sapiente, ea excepturi sunt atque accusantium perferendis magnam
+          quibusdam odio aut quis expedita. Blanditiis, consequatur reiciendis
+          dolorem corporis quae officiis provident reprehenderit veritatis
+          nesciunt? Fuga, iste ipsa sequi illo vero labore quibusdam eos
+          voluptatem saepe provident libero magnam quod in at commodi ab
+          laboriosam quam beatae itaque assumenda. Ipsa soluta dolores nisi
+          reprehenderit saepe minus ducimus perspiciatis omnis, laborum cumque
+          molestias quidem quam. Saepe laboriosam, iusto ut asperiores officia
+          qui a nisi est ullam sit odio cumque placeat veniam earum voluptate
+          facilis? Impedit neque quas quo aliquid corrupti nisi necessitatibus
+          commodi asperiores! Eaque dicta voluptatum sunt obcaecati ut
+          cupiditate laudantium maiores neque aperiam. Explicabo delectus, unde
+          odit sapiente voluptas corrupti! Eius molestiae officia fugiat
+          aspernatur soluta enim. Nobis cumque dignissimos nulla soluta hic, quo
+          qui atque facilis dicta unde quae modi nam quas ex corrupti saepe
+          officiis assumenda maiores rem itaque sunt quos? Eligendi provident
+          quae rerum officiis dolorem neque iste quam esse unde. Reprehenderit
+          incidunt aliquam veritatis earum, dolor ipsum eligendi quisquam
+          sapiente ullam nostrum veniam laborum, ratione quia voluptatum eum.
+          Temporibus eaque, commodi explicabo dolor molestias, impedit, ut
+          asperiores repellendus atque fugiat dolores ab dolore necessitatibus
+          unde recusandae harum! Ab accusantium, corporis ex vitae doloremque
+          qui non enim recusandae, quo possimus expedita blanditiis et ad quidem
+          laboriosam tenetur exercitationem id eum facere, ratione delectus
+          laborum harum maiores. Cum quis deleniti nam tempore quaerat maiores
+          iste reprehenderit asperiores facilis necessitatibus reiciendis
+          corrupti cupiditate debitis nesciunt, rerum quas iure a quod? Itaque,
+          ullam molestiae illum totam voluptatum nostrum id alias fugiat iste
+          fuga tempore repudiandae maiores, facere ipsa molestias, deserunt nisi
+          dolorem omnis. Veritatis, ut laboriosam cupiditate atque, assumenda
+          quas rem sunt labore expedita accusamus animi vel suscipit. Corporis,
+          adipisci. Voluptate quasi magnam hic enim illum deleniti animi
+          dolorum, facere ab, corrupti quas neque facilis quidem. Voluptatibus,
+          possimus praesentium commodi quo suscipit beatae. Quidem assumenda
+          dolores deleniti nemo exercitationem provident et doloribus modi
+          asperiores, ducimus alias id sit eaque possimus porro autem harum
+          saepe perspiciatis. At, quis tenetur facere beatae vel numquam,
+          officia optio odio consequatur rem pariatur eius atque sapiente minima
+          suscipit architecto corporis explicabo molestias recusandae labore
+          nulla similique quod! Temporibus saepe alias a, reprehenderit
+          doloremque mollitia accusantium aut impedit animi error sapiente cum
+          earum doloribus dolorum inventore quo asperiores modi, facere vitae
+          ducimus dolores quasi consequuntur perspiciatis magnam. Itaque
+          repellendus quam, minus placeat fuga facilis quae, perferendis illo
+          veniam nam laudantium fugit quia eligendi pariatur culpa natus eaque
+          id, delectus ex harum beatae! Perspiciatis id alias architecto ipsam,
+          voluptas dignissimos repudiandae adipisci? Sint quidem, aliquid et
+          vero cumque quae illo accusantium tenetur? Expedita ipsum animi error
+          nesciunt ullam ipsam accusamus adipisci, tenetur ea voluptate
+          repudiandae nam assumenda corporis iusto placeat itaque soluta a
+          reiciendis fuga illo eum facilis non dolorum rerum! Obcaecati magnam
+          dicta tenetur necessitatibus consectetur soluta rem qui adipisci amet
+          incidunt facilis sunt est sint architecto aspernatur perspiciatis
+          eveniet praesentium, delectus provident impedit cum? Quod distinctio
+          amet dolores ad expedita impedit, nostrum, vel animi ullam saepe
+          magnam tempora rem illum dignissimos nobis inventore cupiditate
+          recusandae! Quis voluptate cum id, quasi reprehenderit quos porro,
+          iure harum illum amet officiis dignissimos, voluptatem eum! Dolorum
+          molestiae sapiente, amet numquam accusantium veniam reiciendis non sed
+          temporibus consequuntur deleniti facere perspiciatis officia dicta
+          esse, atque ipsa, in dignissimos modi similique at? Voluptatum, sit.
+          Sunt officiis alias dolores odit laudantium quam itaque fugit,
+          aspernatur consequatur animi velit recusandae libero saepe repellat
+          dolorum ut esse asperiores error soluta cumque eligendi iusto
+          provident. Explicabo culpa eos necessitatibus voluptatem autem quis
+          praesentium, quaerat enim.
+        </p>
       </main>
     </div>
   </body>
