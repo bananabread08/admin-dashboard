@@ -7,10 +7,18 @@ body {
   overflow: hidden;
 }
 
+/* UTILITY */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Container*/
 .parent {
   display: grid;
   grid-template-columns: 250px repeat(8, 1fr);
-  grid-auto-rows: 150px auto 80px;
+  grid-auto-rows: 150px auto;
   grid-template-areas:
     'nav hd hd hd hd hd hd hd hd'
     'nav mn mn mn mn mn mn mn mn'
@@ -26,15 +34,40 @@ aside {
 }
 
 nav {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 1fr;
   gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:focus {
+  color: tomato;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul > li:hover {
+  background-color: #096799;
+}
+
+.logo {
+  margin-top: 1rem;
+}
+
+.logo img {
+  scale: 1.5;
 }
 
 .upper-nav,
 .lower-nav,
 .logo {
-  list-style: none;
   display: flex;
   flex-flow: column;
   gap: 1.5em;
@@ -43,25 +76,163 @@ nav {
   margin-inline: 1rem;
 }
 
-.logo {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-}
-
 .upper-nav li,
 .lower-nav li,
-.logo li {
+.logo div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+
+/* HEADER */
+header {
+  background-color: #ffffff;
+  color: black;
+  grid-area: hd;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 2px 3px rgb(175, 175, 175);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+header .avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.header-upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+header form input {
+  width: 100%;
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  padding: 0.3rem 1rem;
+  margin-right: 1rem;
+  background-color: #e2e8f0;
+}
+
+.notif {
+  flex: 1 0 40%;
+  gap: 1rem;
+}
+
+.header-lower {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.greeting {
+  flex-basis: 60%;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/* HEADER */
-header {
-  background-color: tomato;
-  grid-area: hd;
-  padding: 1.5rem;
+.action-btns {
+  flex: 1 0 40%;
+  gap: 0.5rem;
 }
+
+.action-btns button {
+  padding: 0.3rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #1992d3;
+  color: #fff;
+}
+
+/* 
+header {
+  background-color: #ffffff;
+  color: black;
+  grid-area: hd;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 75px;
+  grid-template-areas:
+    'fm fm fm fm fm nb nb nb'
+    'gr gr gr gr gr ab ab ab';
+  box-shadow: 0px 2px 3px rgb(175, 175, 175);
+}
+
+header form {
+  grid-area: fm;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header form input {
+  width: 100%;
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  padding: 0.3rem 1rem;
+  margin-right: 1rem;
+  background-color: #e2e8f0;
+}
+
+.notif {
+  grid-area: nb;
+  display: grid;
+  place-content: center;
+}
+
+.notif-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.greeting {
+  grid-area: gr;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.greeting .avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+}
+
+.greeting-name {
+  font-weight: 700;
+}
+
+.action-btns {
+  width: 100%;
+  grid-area: ab;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-btns button {
+  padding: 0.3rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #1992d3;
+  color: #fff;
+} */
 
 /* MAIN */
 main {
@@ -69,5 +240,28 @@ main {
   grid-area: mn;
   height: 100vh;
   overflow-y: auto;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+@media (max-width: 700px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 250px repeat(8, 1fr);
+    grid-auto-rows: 70px auto;
+    grid-template-areas:
+      'nav nav nav nav nav nav nav nav nav '
+      'hd hd hd hd hd hd hd hd hd'
+      'mn mn mn mn mn mn mn mn mn';
+  }
+  .header-lower,
+  .header-upper {
+    flex-direction: column;
+  }
+  aside {
+    min-height: 100%;
+  }
+  .upper-nav,
+  .lower-nav {
+    display: none;
+  }
 }

@@ -11,77 +11,97 @@
   <body>
     <div class="parent">
       <header>
-        <form>
-          <div><img src="assets/magnify.png" alt="magnifying glass" /></div>
-          <input type="text" placeholder="Search..." />
-        </form>
-        <!-- <div class="notif-bar">
-          <img
-            class="bell-icon"
-            src="assets/bell-ring.png"
-            alt="bell ringing"
-          />
-          <img class="avatar small" src="assets/pika.jpeg" alt="cute mouse" />
-          <p class="name">Pika D. Chu</p>
-        </div>
-        <div class="greeting-cont">
-          <img class="avatar" src="assets/pika.jpeg" alt="cute mouse" />
-          <div class="greeting">
-            <p>Hi there,</p>
-            <p class="name">Pika D. Chu (@pikap1111)</p>
+        <div class="header-upper">
+          <form>
+            <div><img src="assets/magnify.png" alt="magnifying glass" /></div>
+            <label for="search" hidden>Search</label>
+            <input type="text" name="search" placeholder="Search..." />
+          </form>
+          <div class="notif flex-center">
+            <img
+              class="bell-icon"
+              src="assets/bell-ring.png"
+              alt="bell ringing"
+            />
+            <img class="avatar small" src="assets/pika.jpeg" alt="cute mouse" />
+            <p class="name">Pik A. Chu</p>
           </div>
-        </div> -->
-        <div class="action-btns">
-          <button>New</button>
-          <button>Upload</button>
-          <button>Share</button>
+        </div>
+        <div class="header-lower">
+          <div class="greeting">
+            <img class="avatar" src="assets/pika.jpeg" alt="cute mouse" />
+            <div class="greeting-text">
+              <p>Hi there,</p>
+              <p class="greeting-name">Pik A. Chu (@pikap1111)</p>
+            </div>
+          </div>
+          <div class="action-btns flex-center">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+          </div>
         </div>
       </header>
       <aside>
         <nav>
-          <ul class="logo">
-            <li>
+          <div class="logo">
+            <div>
               <img src="assets/view-dashboard.png" alt="dashboard" />
               Dashboard
-            </li>
-          </ul>
+            </div>
+          </div>
           <ul class="upper-nav">
-            <li><img src="./assets/home.png" alt="house icon" />Home</li>
+            <li>
+              <img src="./assets/home.png" alt="house icon" /><a href="#"
+                >Home</a
+              >
+            </li>
             <li>
               <img
                 src="./assets/card-account-details.png"
                 alt="card profile"
-              />Profile
+              /><a href="#">Profile</a>
             </li>
             <li>
-              <img src="./assets/message.png" alt="message icon" />Messages
+              <img src="./assets/message.png" alt="message icon" /><a href="#"
+                >Messages</a
+              >
             </li>
             <li>
-              <img
-                src="./assets/clock-time-three.png"
-                alt="clock icon"
-              />History
+              <img src="./assets/clock-time-three.png" alt="clock icon" /><a
+                href="#"
+                >History</a
+              >
             </li>
             <li>
-              <img src="./assets/note-multiple.png" alt="note icon" />Tasks
+              <img src="./assets/note-multiple.png" alt="note icon" /><a
+                href="#"
+                >Tasks</a
+              >
             </li>
             <li>
               <img
                 src="./assets/account-group.png"
                 alt="group-of-people-icon"
-              />Communities
+              /><a href="#">Communities</a>
             </li>
           </ul>
           <ul class="lower-nav">
-            <li><img src="./assets/cog.png" alt="cog-icon" />Settings</li>
             <li>
-              <img src="./assets/help-circle.png" alt="help-circle" />Support
+              <img src="./assets/cog.png" alt="cog-icon" /><a href="#"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <img src="./assets/help-circle.png" alt="help-circle" /><a href=""
+                >Support</a
+              >
             </li>
             <li>
               <img
                 src="./assets/shield-lock.png"
                 alt="shield with lock icon"
-              />Privacy
+              /><a href="#">Privacy</a>
             </li>
           </ul>
         </nav>
