@@ -4,248 +4,309 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="reset.css" />
     <title>Dashboard</title>
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <form>
-          <div><img src="assets/magnify.png" alt="magnifying glass" /></div>
-          <input type="text" placeholder="Search..." />
-        </form>
-        <div class="notif-bar">
-          <img
-            class="bell-icon"
-            src="assets/bell-ring.png"
-            alt="bell ringing"
-          />
-          <img class="avatar small" src="assets/pika.jpeg" alt="cute mouse" />
-          <p class="name">Pika D. Chu</p>
-        </div>
-        <div class="greeting-cont">
-          <img class="avatar" src="assets/pika.jpeg" alt="cute mouse" />
-          <div class="greeting">
-            <p>Hi there,</p>
-            <p class="name">Pika D. Chu (@pikap1111)</p>
+    <div class="parent">
+      <header>
+        <div class="header-upper">
+          <form>
+            <div><img src="assets/magnify.png" alt="magnifying glass" /></div>
+            <label for="search" hidden>Search</label>
+            <input type="text" name="search" placeholder="Search..." />
+          </form>
+          <div class="notif flex-center">
+            <img
+              class="bell-icon"
+              src="assets/bell-ring.png"
+              alt="bell ringing"
+            />
+            <img class="avatar small" src="assets/pika.jpeg" alt="cute mouse" />
+            <p class="name">Pik A. Chu</p>
           </div>
         </div>
-        <div class="action-btns">
-          <button>New</button>
-          <button>Upload</button>
-          <button>Share</button>
+        <div class="header-lower">
+          <div class="greeting">
+            <img class="avatar" src="assets/pika.jpeg" alt="cute mouse" />
+            <div class="greeting-text">
+              <p>Hi there,</p>
+              <p class="greeting-name">Pik A. Chu (@pikap1111)</p>
+            </div>
+          </div>
+          <div class="action-btns flex-center">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+          </div>
         </div>
       </header>
-      <nav class="sidebar">
-        <h1>
-          <img src="assets/view-dashboard.png" alt="dashboard" />Dashboard
-        </h1>
-        <ul class="upper">
-          <li><img src="./assets/home.png" alt="house icon" />Home</li>
-          <li>
-            <img
-              src="./assets/card-account-details.png"
-              alt="card profile"
-            />Profile
-          </li>
-          <li><img src="./assets/message.png" alt="message icon" />Messages</li>
-          <li>
-            <img src="./assets/clock-time-three.png" alt="clock icon" />History
-          </li>
-          <li><img src="./assets/note-multiple.png" alt="note icon" />Tasks</li>
-          <li>
-            <img
-              src="./assets/account-group.png"
-              alt="group-of-people-icon"
-            />Communities
-          </li>
-        </ul>
-        <ul class="lower">
-          <li><img src="./assets/cog.png" alt="cog-icon" />Settings</li>
-          <li>
-            <img src="./assets/help-circle.png" alt="help-circle" />Support
-          </li>
-          <li>
-            <img
-              src="./assets/shield-lock.png"
-              alt="shield with lock icon"
-            />Privacy
-          </li>
-        </ul>
-      </nav>
-      <main class="main-content">
-        <h2 class="project-header">Your Projects</h2>
-        <section class="projects">
-          <div class="card">
-            <h3>Northern Downpour</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-              repudiandae libero ipsam quasi, distinctio et dolorum atque
-              doloremque amet error nemo praesentium blanditiis qui porro!
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
+      <aside>
+        <nav>
+          <div class="logo">
+            <div>
+              <img src="assets/view-dashboard.png" alt="dashboard" />
+              Dashboard
             </div>
           </div>
-          <div class="card">
-            <h3>I Write Sins Not Tragedies</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
-              earum aperiam error suscipit ratione laborum, dolorum facilis
-              repellendus ea obcaecati? Ut voluptas delectus qui sit! Provident
-              distinctio non facere inventore.
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
+          <ul class="upper-nav">
+            <li>
+              <img src="./assets/home.png" alt="house icon" /><a href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <img
+                src="./assets/card-account-details.png"
+                alt="card profile"
+              /><a href="#">Profile</a>
+            </li>
+            <li>
+              <img src="./assets/message.png" alt="message icon" /><a href="#"
+                >Messages</a
+              >
+            </li>
+            <li>
+              <img src="./assets/clock-time-three.png" alt="clock icon" /><a
+                href="#"
+                >History</a
+              >
+            </li>
+            <li>
+              <img src="./assets/note-multiple.png" alt="note icon" /><a
+                href="#"
+                >Tasks</a
+              >
+            </li>
+            <li>
+              <img
+                src="./assets/account-group.png"
+                alt="group-of-people-icon"
+              /><a href="#">Communities</a>
+            </li>
+          </ul>
+          <ul class="lower-nav">
+            <li>
+              <img src="./assets/cog.png" alt="cog-icon" /><a href="#"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <img src="./assets/help-circle.png" alt="help-circle" /><a href=""
+                >Support</a
+              >
+            </li>
+            <li>
+              <img
+                src="./assets/shield-lock.png"
+                alt="shield with lock icon"
+              /><a href="#">Privacy</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <div class="main-wrapper">
+          <section class="projects-container">
+            <h2>Your Projects</h2>
+            <div class="projects">
+              <div class="card-base card">
+                <h3>Northern Downpour</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  repudiandae libero ipsam quasi, distinctio et dolorum atque
+                  doloremque amet error nemo praesentium blanditiis qui porro!
+                </p>
+                <div class="icons">
+                  <a href="#"
+                    ><img
+                      src="assets/star-plus-outline.png"
+                      alt="star-plus-outline"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="assets/eye-plus-outline.png"
+                      alt="eye-plus-outline"
+                    />
+                  </a>
+                  <a href="#">
+                    <img src="assets/source-fork.png" alt="source-fork" />
+                  </a>
+                </div>
+              </div>
+              <div class="card-base card">
+                <h3>I Write Sins Not Tragedies</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Magnam earum aperiam error suscipit ratione laborum, dolorum
+                  facilis repellendus ea obcaecati? Ut voluptas delectus qui
+                  sit! Provident distinctio non facere inventore.
+                </p>
+                <div class="icons">
+                  <a href="#"
+                    ><img
+                      src="assets/star-plus-outline.png"
+                      alt="star-plus-outline"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="assets/eye-plus-outline.png"
+                      alt="eye-plus-outline"
+                    />
+                  </a>
+                  <a href="#">
+                    <img src="assets/source-fork.png" alt="source-fork" />
+                  </a>
+                </div>
+              </div>
+              <div class="card-base card">
+                <h3>Nails for Breakfast, Tacks for Snacks</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Facere suscipit aspernatur, consequuntur nostrum labore rerum
+                  eveniet commodi, in laboriosam corporis recusandae excepturi.
+                  Tenetur, perferendis possimus.
+                </p>
+                <div class="icons">
+                  <a href="#"
+                    ><img
+                      src="assets/star-plus-outline.png"
+                      alt="star-plus-outline"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="assets/eye-plus-outline.png"
+                      alt="eye-plus-outline"
+                    />
+                  </a>
+                  <a href="#">
+                    <img src="assets/source-fork.png" alt="source-fork" />
+                  </a>
+                </div>
+              </div>
+              <div class="card-base card">
+                <h3>That Green Gentleman (Things Have Changed)</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ipsam eveniet voluptatum facere dolorum cumque enim tenetur
+                  corrupti quo aut odit soluta, impedit commodi! Fugiat ad cum
+                  voluptatum optio facere.
+                </p>
+                <div class="icons">
+                  <a href="#"
+                    ><img
+                      src="assets/star-plus-outline.png"
+                      alt="star-plus-outline"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="assets/eye-plus-outline.png"
+                      alt="eye-plus-outline"
+                    />
+                  </a>
+                  <a href="#">
+                    <img src="assets/source-fork.png" alt="source-fork" />
+                  </a>
+                </div>
+              </div>
+              <div class="card-base card">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                  sunt?
+                </p>
+                <div class="icons">
+                  <a href="#"
+                    ><img
+                      src="assets/star-plus-outline.png"
+                      alt="star-plus-outline"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="assets/eye-plus-outline.png"
+                      alt="eye-plus-outline"
+                    />
+                  </a>
+                  <a href="#">
+                    <img src="assets/source-fork.png" alt="source-fork" />
+                  </a>
+                </div>
+              </div>
+              <div class="card-base card">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                  sunt?
+                </p>
+                <div class="icons">
+                  <a href="#"
+                    ><img
+                      src="assets/star-plus-outline.png"
+                      alt="star-plus-outline"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="assets/eye-plus-outline.png"
+                      alt="eye-plus-outline"
+                    />
+                  </a>
+                  <a href="#">
+                    <img src="assets/source-fork.png" alt="source-fork" />
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <h3>Nails for Breakfast, Tacks for Snacks</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
-              suscipit aspernatur, consequuntur nostrum labore rerum eveniet
-              commodi, in laboriosam corporis recusandae excepturi. Tenetur,
-              perferendis possimus.
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
+          </section>
+          <section class="announcements">
+            <h2>Announcements</h2>
+            <div class="card-base ann-list">
+              <div class="ann-card">
+                <h3>Site Maintenance</h3>
+                <p>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              <hr />
+              <div class="ann-card">
+                <h3>Community Share Day</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              </div>
+              <hr />
+              <div class="ann-card">
+                <h3>Updated Privacy Policy</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <h3>That Green Gentleman (Things Have Changed)</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
-              eveniet voluptatum facere dolorum cumque enim tenetur corrupti quo
-              aut odit soluta, impedit commodi! Fugiat ad cum voluptatum optio
-              facere.
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
+          </section>
+          <section class="trending">
+            <h2>Trending</h2>
+            <div class="card-base trend-list">
+              <div class="trend">
+                <img src="./assets/cindy.png" class="avatar" alt="cindy" />
+                <div class="trend-names">
+                  <p>@cindyfire</p>
+                  <p>Fire Fighter</p>
+                </div>
+              </div>
+              <div class="trend">
+                <img src="./assets/rowlet.png" class="avatar" alt="rowlet" />
+                <div class="trend-names">
+                  <p>@owlBeThere</p>
+                  <p>Pilot</p>
+                </div>
+              </div>
+              <div class="trend">
+                <img src="./assets/osha.png" class="avatar" alt="osha" />
+                <div class="trend-names">
+                  <p>@12yoshayosha12</p>
+                  <p>Olympic Swimmer</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <h3>title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, sunt?
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <h3>title</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, sunt?
-            </p>
-            <div class="icon-cont">
-              <a href="#"
-                ><img
-                  src="assets/star-plus-outline.png"
-                  alt="star-plus-outline"
-              /></a>
-              <a href="#">
-                <img src="assets/eye-plus-outline.png" alt="eye-plus-outline" />
-              </a>
-              <a href="#">
-                <img src="assets/source-fork.png" alt="source-fork" />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <h2 class="ann-header">Announcements</h2>
-        <section class="announcements">
-          <div class="ann-card flex-media">
-            <p>announcement</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
-              veniam?
-            </p>
-          </div>
-          <div class="ann-card flex-media">
-            <p>announcement</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero,
-              non.
-            </p>
-          </div>
-          <div class="ann-card flex-media">
-            <p>announcement</p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Deserunt, aperiam?
-            </p>
-          </div>
-        </section>
-
-        <h2 class="trend-header">Trending</h2>
-        <section class="trending">
-          <div class="trend-card flex-media">
-            <p>trend</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
-              veniam?
-            </p>
-          </div>
-          <div class="trend-card flex-media">
-            <p>trend</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
-              veniam?
-            </p>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
     </div>
   </body>
