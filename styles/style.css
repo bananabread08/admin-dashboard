@@ -171,8 +171,7 @@ main {
 .main-wrapper {
   display: grid;
   grid-template-columns: 6fr 2fr;
-  grid-template-rows: 1fr 1fr;
-  max-height: 100%;
+  grid-auto-rows: auto;
 }
 
 .card-base {
@@ -199,11 +198,25 @@ main {
 
 .card {
   border-left: 0.5rem solid skyblue;
+  min-height: 100%;
+}
+
+.card p {
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .icons {
   align-self: flex-end;
   display: flex;
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+
+.icons > *:hover {
+  filter: opacity(0.7);
 }
 
 .announcements {
@@ -213,7 +226,7 @@ main {
 }
 
 .ann-card {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding: 0.5rem;
 }
 
@@ -240,7 +253,7 @@ main {
 }
 @media (max-width: 800px) {
   .parent {
-    grid-template-columns: 250px repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: 70px 200px auto;
     grid-template-areas:
       'nav nav nav nav nav nav nav nav nav '
@@ -257,5 +270,25 @@ main {
   .upper-nav,
   .lower-nav {
     display: none;
+  }
+
+  .main-wrapper {
+    grid-template-columns: 6fr 3fr;
+  }
+
+  .projects-container {
+    grid-column: 1/9;
+    grid-row: 6/9;
+    padding: 0.5rem;
+  }
+
+  .announcements {
+    grid-column: 1/9;
+    grid-row: 1/3;
+  }
+
+  .trending {
+    grid-column: 1/9;
+    grid-row: 3/5;
   }
 }
